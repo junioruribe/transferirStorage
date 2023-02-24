@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pag2</title>
+    <style type="text/css">
+       div{ width: 600px; height:300px; margin:auto; border-style:dashed; text-align: center; background-color: rgb(243, 118, 118); }
+       #div0{ background-color: rgb(144, 243, 243); height: 400px; width: 800px; border-radius: 100px; }
+     </style>
+    <script>
+        function recibir(){
+       
+
+         
+        nom=window.localStorage.getItem('nombre');
+        vr=window.localStorage.getItem('valor');
+        cant=window.localStorage.getItem('cantidad');
+      
+
+           document.getElementById('txtNombre').value=nom;
+           document.getElementById('txtValor').value=vr;
+           document.getElementById('txtCantidad').value=cant;
+
+           window.localStorage.clear()
+    
+        }
+    </script>
+</head>
+<body>
+    <body onload="recibir()">
+        <div id="div0">
+            <div>
+                <br><br>
+                Nombre
+                <input type="text" id="txtNombre">
+                <br><br>
+                Valor
+                <input type="text" id="txtValor">
+                <br><br>
+                Cantidad
+                <input type="text" id="txtCantidad">
+                <br><br>
+                <a href="enviar.html">atras</a>
+            </div>
+        </div>
+    </body>
+</body>
+</html>
